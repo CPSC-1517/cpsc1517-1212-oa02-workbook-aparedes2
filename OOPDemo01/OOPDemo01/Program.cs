@@ -27,6 +27,9 @@ foreach (var currentStudent in cpsc1517Course.Students)
 // Remove 2 student from the course
 cpsc1517Course.RemoveStudent("Hamza Said");
 cpsc1517Course.RemoveStudent("Haseeb Memon");
+cpsc1517Course.RemoveStudent("James Skrlj");
+
+cpsc1517Course.SaveToFile("cpsc1517.cvs");
 
 // Display the number of students
 WriteLine($"There are now {cpsc1517Course.StudentCount} students.");

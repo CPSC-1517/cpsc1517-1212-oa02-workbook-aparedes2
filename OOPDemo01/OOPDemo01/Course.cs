@@ -51,7 +51,7 @@ namespace OOPDemo01
         }
         #endregion
 
-        #region
+        #region Instance-Level Methods
         public void AddStudent(string name)
         {
             Students.Add(name);
@@ -108,6 +108,7 @@ namespace OOPDemo01
                         {
                             Students.Add(lineData);
                         }
+                        //Students.Add(reader.ReadLine())
                     }
                 }
                 success = true;
