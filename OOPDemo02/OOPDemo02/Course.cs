@@ -8,5 +8,9 @@ namespace OOPDemo02
 {
     internal class Course
     {
+        public override string ToString()
+        {
+            return $"{CourseNo},{CourseName}";
+        }
     }
 }
