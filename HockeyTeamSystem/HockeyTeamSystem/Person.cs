@@ -31,10 +31,10 @@ namespace HockeyTeamSystem
             // [] range of character
             // {3,} at least 3
             // {,2} up to 2
-            var fullNameCheck = new Regex(@"^[a-zA-Z]{3,}$");
+            var fullNameCheck = new Regex(@"^[a-zA-Z \-]{3,}$");
             if (fullNameCheck.IsMatch(fullName) == false)
             {
-                throw new ArgumentException("Person FullName must contain at least 3 characters")
+                throw new ArgumentException("Person FullName must contain at least 3 characters");
             }
 
             // The "this" keyword refers to the current object and it is 

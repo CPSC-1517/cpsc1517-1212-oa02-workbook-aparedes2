@@ -86,5 +86,9 @@ namespace HockeyTeamSystem
             HockeyPlayers.Add(player);
         }
 
+        public override string ToString()
+        {
+            return $"{TeamName},{Coach},{Division}";
+        }
     }
 }

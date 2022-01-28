@@ -13,10 +13,15 @@ namespace HockeyTeamSystem
         public readonly string StartDate;
 
         // Define a greedy constructor with fullName and startDate as parameters
-        public HockeyCoach(string fullName, string startDate); Base64FormattingOptions(fullName)
+        public HockeyCoach(string fullName, string startDate) : base(fullName)
         {
             this.StartDate = startDate;
         }
 
+        // Override the ToString() method to return a CSV
+        public override string ToString()
+        {
+            return $"{FullName},{StartDate}";        
+        }
     }
 }

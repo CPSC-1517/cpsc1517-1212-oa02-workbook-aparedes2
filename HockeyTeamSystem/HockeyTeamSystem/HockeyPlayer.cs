@@ -60,7 +60,7 @@ namespace HockeyTeamSystem
             // There should be 5 values in the tokens
             if (tokens.Length != 5)
             {
-                throw new FormatException($"CSV string is not in the expected format. {csvLineText}");
+                throw new FormatException($"CSV string must contain exactly 5 values. {csvLineText}");
             }
 
 
