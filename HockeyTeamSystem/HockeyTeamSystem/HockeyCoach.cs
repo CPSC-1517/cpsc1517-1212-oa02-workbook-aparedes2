@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace HockeyTeamSystem
 {
-    // Define a class named HockeyCoach that inherits from the base class Perosn
-    internal class HockeyCoach : Person
+    // Define a class named HockeyCoach that inherits from the base class Person
+    public class HockeyCoach : Person
     {
-        // Deinfe readonly public field that can be assigned value in the constructor
+        // Define readonly public field that can only be assigned a value 
+        // in the constructor
         public readonly string StartDate;
 
-        // Define a greedy constructor with fullName and startDate as parameters
-        public HockeyCoach(string fullName, string startDate) : base(fullName)
+        // Define a greedy constructor with startDate as parameter
+            // The ": base(fullname)" means pass fullName to the base (Person) constructor
+        public HockeyCoach(string fullName, string startDate) :base(fullName)
         {
             this.StartDate = startDate;
         }
-
+        
         // Override the ToString() method to return a CSV
         public override string ToString()
         {
-            return $"{FullName},{StartDate}";        
+            return $"{FullName},{StartDate}";
         }
     }
 }
